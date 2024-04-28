@@ -1,11 +1,13 @@
 const { google } = require('googleapis')
+const { dotenv} = require('dotenv');
 const fs = require('fs').promises;
 const { formatInTimeZone } = require('date-fns-tz');
 // Replace with your Google Service Account credentials file path
 const CREDENTIALS_FILE = 'credentials.json';
 
+dotenv.config();
 // Spreadsheet ID
-const SPREADSHEET_ID = '1p-eoJBXP4SRIpIKasm6EGQQBZugXFT5cc7HnFm3twLc';
+const SPREADSHEET_ID = process.env.SPREAD_SHEET_ID;
 
 async function createSpreadsheet(data) {
   try {

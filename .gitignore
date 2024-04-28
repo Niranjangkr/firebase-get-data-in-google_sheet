@@ -3,3 +3,6 @@
 data
 credentials.json
 dataFavcyHive.json
+
+# local env files
+.env*.local
